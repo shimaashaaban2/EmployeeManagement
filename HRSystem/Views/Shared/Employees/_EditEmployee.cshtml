@@ -1,0 +1,85 @@
+﻿@model HRSystem.Models.Employee
+<div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit New Employee</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="UpdateEmployee" method="post" asp-route-Id="Id" >
+                    @*<input type="hidden"asp-for="Id" id="Id" name="Id" />*@
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                
+                                <input />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="position">position</label>
+                                <input type="text" class="form-control" asp-for="position" id="position" placeholder="position"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Department">Department</label>
+                                <input type="text" class="form-control" asp-for="Department" id="Department" placeholder="Department" />
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Dept_no">Dept_no</label>
+                                <input type="number" class="form-control" asp-for="Dept_no" id="Dept_no" placeholder="Dept_no"  />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="Age">Age</label>
+                                <input type="text" class="form-control" asp-for="Age" id="Age" placeholder="Age" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="salary">salary</label>
+                                <input type="text" class="form-control" asp-for="salary" id="salary" placeholder="salary" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="UrlImage">UrlImage</label>
+                                <input type="text" class="form-control" asp-for="UrlImage" id="UrlImage" placeholder="Image"  />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <input type="submit" class="btn btn-primary" value="Save"/>
+            </div>
+        </div>
+    </div>
+</div>

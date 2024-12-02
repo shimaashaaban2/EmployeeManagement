@@ -1,0 +1,61 @@
+﻿
+@model List<HRSystem.Models.Employee>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count() > 0 && Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.name</td>
+                            <td>@item.position</td>
+                            <td>@item.Department</td>
+                            <td>@item.Age</td>
+                            @*<td>@item.Dept_no</td>*@
+                            <td>@item.salary</td>
+                            <td>
+                                <img class="rounded-circle"
+                                     src="~/Content/img/undraw_profile.svg" width="50">
+                            </td>
+                            <td>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-black-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                         aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditModal">Edit</a>
+                                        <a class="dropdown-item" href="#">Details</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+
+                else
+                {
+                    <tr>
+                        <td col-span="8">No Data Exist</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>

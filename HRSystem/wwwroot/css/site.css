@@ -1,0 +1,89 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*.field-icon {
+    float: right;
+    top: 16px;
+    position: absolute;
+    left: 255px;
+    z-index: 2;
+}*/
+/*
+.container {
+    padding-top: 50px;
+    margin: auto;
+}*/
+/*span.field-icon .toggle-password {
+    top: 16px;
+    position: absolute;
+    left: 255px;
+}*/
+/*.password-section {
+    position: relative;
+    display: inline-block;
+}
+*/
+.fa-eye {
+    /*position: absolute;*/
+    /* top: 43%;
+        right: 58px;*/ /* Adjust this value to control the icon's position */
+    /*align-items: center;
+    display: flex;
+    transform: translate(-50%,-50%);
+    cursor: pointer;*/
+    /*position: absolute;
+    transform: translateY(-50%);
+    top: 45%;
+    right: 85px;
+    float: right;
+    cursor: pointer;*/
+}
+
+.fa-eye-slash {
+    /*position: absolute;*/
+    /* top: 43%;
+    right: 58px; */ /* Adjust this value to control the icon's position */
+    /*align-items: center;
+    display: flex;
+    transform: translate(-50%,-50%);
+    cursor: pointer;*/
+    /*position: absolute;
+    transform: translateY(-50%);
+    top: 45%;
+    right: 85px;
+    float: right;
+    cursor: pointer;*/
+}
+ /*.fa-eye {
+    position: absolute;
+    top: 190px;
+    right: 85px;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}*/
+
+ /*.fa-eye-slash {
+    position: absolute;
+    top: 20px;
+    right: 42px;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}*/

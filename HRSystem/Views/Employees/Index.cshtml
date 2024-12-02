@@ -1,0 +1,45 @@
+﻿@model List<Employee>
+@{
+    Layout = "_DashBoardLayout";
+    ViewBag.Title = "All Employees";
+    List<Employee> emplist = ViewBag.Emplist;
+    HRSystem.DTO.AddEmployeeDTO add = ViewBag.AddData;
+    HRSystem.DTO.EditEmployeeDTO edit = ViewBag.EditData;
+    //ViewData["Id"]=;
+}
+
+<div class="card shadow mb-4" >
+        <div class="card-header">
+        <a class="btn btn-primary" href="#" id="btn-add" data-toggle="modal" onclick="Add()" data-target="#AddModal">
+            <i class="fas fa-plus"></i>
+            <span>Add New Employee</span>
+        </a>
+       @* <a href="#addEmployeeModal" class="btn btn-primary" data-toggle="modal">
+            <i class="fas fa-plus"></i>
+            <span>Add New Employee</span>
+        </a>*@
+        <a></a>
+    </div>
+    <div class="card-body" id="list">
+        @Html.Partial("~/Views/Shared/Employees/_Employeelist.cshtml")
+    </div>
+        </div>
+
+
+<div>
+    @Html.Partial("~/Views/Shared/Employees/_AddEmployee.cshtml",add)
+
+</div>
+
+<div>
+    @Html.Partial("~/Views/Shared/Employees/_EditEmployee.cshtml",emplist)
+
+</div>
+
+@*@Html.Partial("_Modal", new BootstrapModel { ID = "modal-action-author", AreaLabeledId = "modal-action-author-label", Size = ModalSize.Large })*@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/Employee.js"></script>
+
